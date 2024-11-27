@@ -7,4 +7,4 @@
 * split vertical ``` <CTRL-w>v ```
 * split horizontal ``` <CTRL-w>s ```
 * jump up/down ``` <CTRL-U/D> ```
-
+* show full line message ``` <leader>se ```
