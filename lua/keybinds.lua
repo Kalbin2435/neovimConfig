@@ -35,7 +35,8 @@ vim.cmd [[autocmd FileType netrw set relativenumber]]
 vim.cmd [[autocmd FileType netrw set number]]
 
 vim.api.nvim_set_keymap('n', '<leader>se', '<cmd>lua vim.diagnostic.open_float()<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('t', '<Esc>', [[<C-\><C-n>]], { noremap = true, silent = true })
+--vim.api.nvim_set_keymap('t', '<Esc>', [[<C-\><C-n>]], { noremap = true, silent = true })
+vim.api.nvim_set_keymap('t', '<Esc>', '<cmd>lua ToggleCurrentSplit("horizontal")<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>ts', '<cmd>lua ToggleCurrentSplit("horizontal")<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>tv', '<cmd>lua ToggleCurrentSplit("vertical")<CR>', { noremap = true, silent = true })
 
@@ -58,6 +59,7 @@ function ToggleCurrentSplit(direction)
         end
         local new_winid = vim.api.nvim_get_current_win()
         vim.api.nvim_win_set_buf(new_winid, TerminalWindowBufferId)
+        vim.cmd("startinsert")
     end
 
 end
