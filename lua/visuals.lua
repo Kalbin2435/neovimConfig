@@ -13,4 +13,4 @@ local function set_transparent_background()
 vim.cmd("colorscheme onedark")
 set_transparent_background()
   
-
+vim.cmd("set nolist")
