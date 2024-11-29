@@ -43,6 +43,9 @@ vim.api.nvim_set_keymap('n', '<leader>tv', '<cmd>lua ToggleCurrentSplit("vertica
 
 TerminalWindowBufferId = nil
 function ToggleCurrentSplit(direction)
+    if not IsBufferValid(TerminalWindowBufferId) then
+        TerminalWindowBufferId = nil
+    end
     if TerminalWindowBufferId == nil then
         OpenVerticalTerminal(direction)
         local winid = vim.api.nvim_get_current_win()
@@ -62,6 +65,10 @@ function ToggleCurrentSplit(direction)
         vim.cmd("startinsert")
     end
 
+end
+
+function IsBufferValid(buffer_id)
+    return vim.fn.bufexists(buffer_id) == 1
 end
 
 function OpenVerticalTerminal(direction)
