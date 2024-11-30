@@ -83,6 +83,8 @@ require('mason-lspconfig').setup({
 
 
 require("keybinds")
+require("focus_window")
+require("terminal_splitter")
 require("visuals")
 require("plugin_setups.lualine")
 require("plugin_setups.telescope")
