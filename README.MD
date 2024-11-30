@@ -10,3 +10,6 @@
 * show full line message ``` <leader>se ```
 * toggle terminal horizontal ``` <leader>ts ```
 * toggle terminal vertical ``` <leader>tv ```
+* exit terminal ``` ESC ```
+* Open Current Split in new tab ``` <leader>to ```
+* close last tab and return to previous tab ``` <leader>td ```
