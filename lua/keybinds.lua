@@ -1,5 +1,6 @@
 vim.opt.guicursor = ""
 
+vim.opt.ignorecase = true
 
 vim.opt.nu = true
 vim.opt.rnu = true
@@ -31,6 +32,8 @@ vim.g.mapleader = " "
 vim.api.nvim_set_keymap('n', '<C-o>', '<C-o>zz', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<C-d>', '<C-d>zz', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<C-u>', '<C-u>zz', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<C-w>s', '<C-w>s<C-w>j', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<C-w>v', '<C-w>v<C-w>l', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>e', ':Ex<CR>', { noremap = true, silent = true })
 vim.cmd [[autocmd FileType netrw set relativenumber]]
 vim.cmd [[autocmd FileType netrw set number]]
